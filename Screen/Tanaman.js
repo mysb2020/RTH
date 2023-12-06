@@ -1,7 +1,6 @@
 import React from 'react'
-import { Text, View, Image, TouchableOpacity, ScrollView } from 'react-native';
-import { SafeAreaView } from 'react-native';
-import { MagnifyingGlassIcon, PhotoIcon } from "react-native-heroicons/outline";
+import { Text, View, Image, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
+import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
 import { TextInput } from 'react-native-gesture-handler';
 
 const Tanaman = () => {
