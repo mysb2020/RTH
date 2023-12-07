@@ -21,16 +21,26 @@ const Kalkulator = () => {
     setShowOptions(false);
     setTextColor('black');
   };
+  const handleReset = () => {
+    setJenisTanaman('');
+    // Reset input fields here if needed
+  };
+
+  const handleHitungKarbon = () => {
+    // Logic to calculate carbon footprint based on input data
+    // You can perform the calculation based on the input values
+    // and display the calculated carbon footprint
+  };
 
   return (
-    <SafeAreaView className="flex-1 bg-slate-100">
+    <SafeAreaView className="flex-1 bg-white">
 
       <View style={{ backgroundColor: 'transparent', position: 'absolute', top: 50, borderBottomWidth: 0.5, width: 400 }}>
         <Text className=" text-[25px] pb-2 self-center text-[#044902]">Kalkulator</Text>
       </View>
 
       <View className=" flex-1 h-screen">
-        <View className="p-20 items-center justify-center">
+        <View className=" p-28 items-center justify-center">
           <View className=" top-[10px]">
             {/* Paragraf */}
             <Text style={{ paddingTop: 10, width: 325, marginTop: 20, marginLeft: 2, fontSize: 14, color: 'black', textAlign: 'justify', lineHeight: 18 }}>
@@ -204,7 +214,7 @@ const Kalkulator = () => {
             {/* Umur tanaman */}
             <View className="pb-2.5">
               <View className="flex-row">
-                <Text className=" font-bold">Nama Tanaman</Text>
+                <Text className=" font-bold">Umur Tanaman</Text>
               </View>
               <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Nama Tanaman" />
             </View>
@@ -218,6 +228,36 @@ const Kalkulator = () => {
             </View>
           </View>
 
+          {/* Button - hitung */}
+          <View className="flex-row justify-center items-center p-8 w-[400]">
+          <TouchableOpacity
+            onPress={handleReset}
+            style={{
+              backgroundColor: '#E6EFE6',
+              paddingVertical: 12,
+              paddingHorizontal: 54,
+              borderRadius: 8,
+              marginVertical: 10,
+              marginRight: 15,
+            }}
+          >
+            <Text style={{ color: '#044902', fontWeight: 'bold' }}>Reset</Text>
+          </TouchableOpacity>
+
+          <TouchableOpacity
+            onPress={handleHitungKarbon}
+            style={{
+              backgroundColor: '#F5F5F5',
+              paddingVertical: 12,
+              paddingHorizontal: 24,
+              borderRadius: 8,
+              marginVertical: 10,
+              
+            }}
+          >
+            <Text style={{ color: '#9E9E9E', fontWeight: 'bold' }}>Hitung Karbon</Text>
+          </TouchableOpacity>
+          </View>
 
         </View>
       </View>
