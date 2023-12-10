@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Text, View, Image, TouchableOpacity, ScrollView, SafeAreaView, Modal, FlatList } from 'react-native'
-import { ChevronDownIcon } from "react-native-heroicons/outline";
+import { ChevronDownIcon, LanguageIcon } from "react-native-heroicons/outline";
 import { Picker } from '@react-native-picker/picker';
 import { TextInput } from 'react-native-gesture-handler';
 
