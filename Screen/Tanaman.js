@@ -2,8 +2,31 @@ import React from 'react'
 import { Text, View, Image, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
 import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
 import { TextInput } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const Tanaman = () => {
+  const navigation = useNavigation();
+
+  const handleWinterPress = () => {
+    // Navigasi ke halaman Winter.js
+    navigation.navigate('Winter'); // Sesuaikan dengan nama halaman Winter Anda
+  };
+
+  const handleSummerPress = () => {
+    // Navigasi ke halaman Summer.js
+    navigation.navigate('Summer'); // Sesuaikan dengan nama halaman Winter Anda
+  };
+
+  const handleRainPress = () => {
+    // Navigasi ke halaman Rain.js
+    navigation.navigate('Rain'); // Sesuaikan dengan nama halaman Winter Anda
+  };
+
+  const handleAutumnPress = () => {
+    // Navigasi ke halaman Autumn.js
+    navigation.navigate('Autumn'); // Sesuaikan dengan nama halaman Winter Anda
+  };
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       
@@ -79,7 +102,7 @@ const Tanaman = () => {
 
           <View className="p-5">
           <View className="relative top-[-50px] w-[161px] h-[190px] bg-black rounded-[8px]">
-            <TouchableOpacity onPress={() => console.log('pop1')}>
+            <TouchableOpacity onPress={handleWinterPress}>
             <Image source={require('../assets/alyssum.jpg')}
               className="h-[130px] rounded-t-lg absolute  w-[161px] "
               />
@@ -90,7 +113,7 @@ const Tanaman = () => {
           </View>
 
           <View className="relative top-[-200px] left-[188px] w-[161px] h-[190px] bg-black rounded-[8px]">
-            <TouchableOpacity onPress={() => console.log('pop1')}>
+            <TouchableOpacity onPress={handleSummerPress}>
             <Image source={require('../assets/Summer.jpg')}
               className="h-[130px] rounded-t-lg absolute  w-[161px] "
               />
@@ -101,7 +124,7 @@ const Tanaman = () => {
           </View>
 
           <View className="relative top-[-200px] w-[161px] h-[190px] bg-black rounded-[8px]">
-            <TouchableOpacity onPress={() => console.log('pop1')}>
+            <TouchableOpacity onPress={handleRainPress}>
             <Image source={require('../assets/Rain.jpg')}
               className="h-[130px] rounded-t-lg absolute  w-[161px] "
               />
@@ -112,7 +135,7 @@ const Tanaman = () => {
           </View>
 
           <View className="relative top-[-350px] left-[188px] w-[161px] h-[190px] bg-black rounded-[8px]">
-            <TouchableOpacity onPress={() => console.log('pop1')}>
+            <TouchableOpacity onPress={handleAutumnPress}>
             <Image source={require('../assets/autumn.jpg')}
               className="h-[130px] rounded-t-lg absolute  w-[161px] "
               />
