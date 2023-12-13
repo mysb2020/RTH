@@ -2,8 +2,20 @@ import React from "react";
 import { SafeAreaView, Image, View, Text, TouchableOpacity } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import { LanguageIcon, LockClosedIcon, PaintBrushIcon, QuestionMarkCircleIcon, ChatBubbleLeftRightIcon, ShieldCheckIcon } from "react-native-heroicons/outline";
+import { useNavigation } from '@react-navigation/native';
 
 const Lainnya = () => {
+  const navigation = useNavigation();
+
+  const handleDompetPress = () => {
+    // Navigasi ke halaman Dompet.js
+    navigation.navigate('Dompet'); // Sesuaikan dengan nama halaman Dompet Anda
+  };
+  const handleEditPress = () => {
+    // Navigasi ke halaman editProfil.js
+    navigation.navigate('Edit'); // Sesuaikan dengan nama halaman edit Anda
+  };
+
   return (
     <SafeAreaView className="flex-1 bg-white">
       <LinearGradient
@@ -17,7 +29,7 @@ const Lainnya = () => {
         className="top-[-680px] left-[140px] h-[120] w-[120] rounded-[60px] ">
       </LinearGradient>
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={handleEditPress}>
         <View className=" bg-white items-center justify-center top-[-720px] left-[225px] h-[40] w-[40] rounded-[60px] ">
           <Image
             source={require('../assets/lainnya/pen.png')} // Ganti dengan path yang sesuai ke gambar kamera Anda
@@ -28,7 +40,7 @@ const Lainnya = () => {
 
       <View className="top-[-600] items-center p-5 h-screen">
         <View className="bg-white shadow shadow-black h-[52px] mb-5 w-[342px] p-4 rounded-lg">
-          <TouchableOpacity className="flex-row ">
+          <TouchableOpacity className="flex-row " onPress={handleDompetPress} >
             <Image
               source={require('../assets/lainnya/wallet.png')} // Gambar dompet
               style={{ width: 23, height: 23 }}
@@ -38,7 +50,7 @@ const Lainnya = () => {
         </View>
 
         <View className="bg-white shadow shadow-black h-[121px] mb-2 w-[342px] p-4 rounded-lg">
-          <TouchableOpacity className="flex-row pb-2">
+          <TouchableOpacity className="flex-row pb-2" onPress={handleEditPress}>
             <Image
               source={require('../assets/lainnya/profile.png')} // Gambar profiil
               style={{ width: 23, height: 23 }}

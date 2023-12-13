@@ -1,16 +1,12 @@
 import React, { useState } from 'react'
-import { Text, View, Image, TouchableOpacity, ScrollView, SafeAreaView, Modal, FlatList } from 'react-native'
-import { ChevronDownIcon, LanguageIcon } from "react-native-heroicons/outline";
+import { Text, View,  TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
+import { ChevronDownIcon, ArrowLeftIcon } from "react-native-heroicons/outline";
 // import { Picker } from '@react-native-picker/picker';
 import { TextInput } from 'react-native-gesture-handler';
 
 const Kalkulator = () => {
   const [jenisTanaman, setJenisTanaman] = useState('');
-  const [tinggiTanaman, setTinggiTanaman] = useState('');
-  const [diameterTanaman, setDiameterTanaman] = useState('');
   const [showJenisOptions, setShowJenisOptions] = useState(false);
-  const [showTinggiOptions, setShowTinggiOptions] = useState(false);
-  const [showDiameterOptions, setShowDiameterOptions] = useState(false);
   const [textColor, setTextColor] = useState('gray');
 
   // Data untuk jenis tanaman
@@ -21,36 +17,10 @@ const Kalkulator = () => {
     // Tambahkan opsi lain jika diperlukan
   ];
 
-  // Data untuk tinggi tanaman
-  const dataTinggiTanaman = [
-    { label: 'Sedang', value: 'Sedang' },
-    { label: 'Tinggi', value: 'Tinggi' },
-    { label: 'Rendah', value: 'Rendah' },
-    // Tambahkan opsi lain jika diperlukan
-  ];
-
-  // Data untuk diameter tanaman
-  const dataDiameterTanaman = [
-    { label: 'Besar', value: 'Besar' },
-    { label: 'Sedang', value: 'Sedang' },
-    { label: 'Kecil', value: 'Kecil' },
-    // Tambahkan opsi lain jika diperlukan
-  ];
-
   const handleJenisOptionPress = (value) => {
     setJenisTanaman(value);
     setShowJenisOptions(false);
     setTextColor('black');
-  };
-
-  const handleTinggiOptionPress = (value) => {
-    setTinggiTanaman(value);
-    setShowTinggiOptions(false);
-  };
-
-  const handleDiameterOptionPress = (value) => {
-    setDiameterTanaman(value);
-    setShowDiameterOptions(false);
   };
   const handleReset = () => {
     setJenisTanaman('');
@@ -141,108 +111,29 @@ const Kalkulator = () => {
               <View className="flex-row">
                 <Text className=" font-bold">Nama Tanaman</Text>
               </View>
-              <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Nama Tanaman" />
+              <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Place Holder" />
             </View>
 
             {/* Input tinggi tanaman */}
+            <View className="pb-2.5">
             <View className="flex-row">
               <Text className=" font-bold">Tinggi Tanaman</Text>
               <Text style={{ color: 'red' }}> *</Text>
             </View>
-            <TouchableOpacity
-              onPress={() => setShowTinggiOptions(!showTinggiOptions)}
-              style={{
-                borderWidth: 1,
-                borderColor: 'gray',
-                height: 40,
-                paddingLeft: 10,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                marginBottom: 10,
-                paddingHorizontal: 10,
-              }}
-            >
-              <Text style={{ color: textColor }}>{tinggiTanaman === '' ? 'Place Holder' : tinggiTanaman}</Text>
-              <ChevronDownIcon size={16} color="#022201" />
-            </TouchableOpacity>
-
-            {showTinggiOptions && (
-              <ScrollView
-                style={{
-                  position: 'absolute',
-                  backgroundColor: '#fff',
-                  borderWidth: 1,
-                  borderColor: 'gray',
-                  left: 8,
-                  maxHeight: 120,
-                  width: '100%',
-                  top: 90, // Adjust this value to fit your layout
-                  zIndex: 1,
-                  borderRadius: 5,
-                }}
-              >
-                {dataTinggiTanaman.map((item, index) => (
-                  <TouchableOpacity
-                    key={index}
-                    onPress={() => handleTinggiOptionPress(item.value)}
-                    style={{ paddingVertical: 8, paddingHorizontal: 10 }}
-                  >
-                    <Text>{item.label}</Text>
-                  </TouchableOpacity>
-                ))}
-              </ScrollView>
-            )}
+            <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Place Holder" />
+            </View>
+            
 
             {/* Input diameter tanaman */}
+            <View className="pb-2.5">
             <View className="flex-row">
               <Text className=" font-bold">Diameter Tanaman</Text>
               <Text style={{ color: 'red' }}> *</Text>
             </View>
-            <TouchableOpacity
-              onPress={() => setShowDiameterOptions(!showDiameterOptions)}
-              style={{
-                borderWidth: 1,
-                borderColor: 'gray',
-                height: 40,
-                paddingLeft: 10,
-                flexDirection: 'row',
-                alignItems: 'center',
-                justifyContent: 'space-between',
-                marginBottom: 10,
-                paddingHorizontal: 10,
-              }}
-            >
-              <Text style={{ color: textColor }}>{diameterTanaman === '' ? 'Place Holder' : diameterTanaman}</Text>
-              <ChevronDownIcon size={16} color="#022201" />
-            </TouchableOpacity>
-
-            {showDiameterOptions && (
-              <ScrollView
-                style={{
-                  position: 'absolute',
-                  backgroundColor: '#fff',
-                  borderWidth: 1,
-                  borderColor: 'gray',
-                  left: 8,
-                  maxHeight: 120,
-                  width: '100%',
-                  top: 230, // Adjust this value to fit your layout
-                  zIndex: 1,
-                  borderRadius: 5,
-                }}
-              >
-                {dataDiameterTanaman.map((item, index) => (
-                  <TouchableOpacity
-                    key={index}
-                    onPress={() => handleDiameterOptionPress(item.value)}
-                    style={{ paddingVertical: 8, paddingHorizontal: 10 }}
-                  >
-                    <Text>{item.label}</Text>
-                  </TouchableOpacity>
-                ))}
-              </ScrollView>
-            )}
+              <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Place Holder" />
+            </View>
+            
+              
 
 
             {/* Umur tanaman */}
@@ -250,7 +141,7 @@ const Kalkulator = () => {
               <View className="flex-row">
                 <Text className=" font-bold">Umur Tanaman</Text>
               </View>
-              <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Nama Tanaman" />
+              <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Place Holder" />
             </View>
 
             {/* Warna daun */}
@@ -258,7 +149,7 @@ const Kalkulator = () => {
               <View className="flex-row">
                 <Text className=" font-bold">Warna Daun</Text>
               </View>
-              <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Nama Tanaman" />
+              <TextInput style={{ borderWidth: 1, borderColor: 'gray', height: 40, paddingLeft: 10 }} placeholder="Place Holder" />
             </View>
           </View>
 

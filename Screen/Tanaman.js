@@ -1,6 +1,6 @@
 import React from 'react'
 import { Text, View, Image, TouchableOpacity, ScrollView, SafeAreaView } from 'react-native';
-import { MagnifyingGlassIcon } from "react-native-heroicons/outline";
+import { MagnifyingGlassIcon, ArrowLeftIcon } from "react-native-heroicons/outline";
 import { TextInput } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 
@@ -14,17 +14,17 @@ const Tanaman = () => {
 
   const handleSummerPress = () => {
     // Navigasi ke halaman Summer.js
-    navigation.navigate('Summer'); // Sesuaikan dengan nama halaman Winter Anda
+    navigation.navigate('Summer'); // Sesuaikan dengan nama halaman summer Anda
   };
 
   const handleRainPress = () => {
     // Navigasi ke halaman Rain.js
-    navigation.navigate('Rain'); // Sesuaikan dengan nama halaman Winter Anda
+    navigation.navigate('Rain'); // Sesuaikan dengan nama halaman rain Anda
   };
 
   const handleAutumnPress = () => {
     // Navigasi ke halaman Autumn.js
-    navigation.navigate('Autumn'); // Sesuaikan dengan nama halaman Winter Anda
+    navigation.navigate('Autumn'); // Sesuaikan dengan nama halaman autumn Anda
   };
 
   return (

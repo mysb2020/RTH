@@ -11,6 +11,8 @@ import Winter from './Screen/Tanaman/Winter';
 import Summer from './Screen/Tanaman/Summer';
 import Autumn from './Screen/Tanaman/Autumn';
 import Rain from './Screen/Tanaman/Rain';
+import Dompet from './Screen/Lainnya/Dompet';
+import Edit from './Screen/Lainnya/Edit';
 
 const Stack = createNativeStackNavigator();
 
@@ -27,6 +29,8 @@ export default function App() {
         <Stack.Screen name="Summer" component={Summer} />
         <Stack.Screen name="Autumn" component={Autumn} />
         <Stack.Screen name="Rain" component={Rain} />
+        <Stack.Screen name="Dompet" component={Dompet} />
+        <Stack.Screen name="Edit" component={Edit} />
       </Stack.Navigator>
     </NavigationContainer>
     </GestureHandlerRootView>
