@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Image, View, Text, TouchableOpacity } from "react-native";
+import { SafeAreaView, Image, View, Text, TouchableOpacity, StatusBar } from "react-native";
 import { LinearGradient } from 'expo-linear-gradient';
 import { LanguageIcon, LockClosedIcon, PaintBrushIcon, QuestionMarkCircleIcon, ChatBubbleLeftRightIcon, ShieldCheckIcon } from "react-native-heroicons/outline";
 import { useNavigation } from '@react-navigation/native';
@@ -18,6 +18,7 @@ const Lainnya = () => {
 
   return (
     <SafeAreaView className="flex-1 bg-white">
+      {/* <StatusBar backgroundColor="#E6EFE6" /> */}
       <LinearGradient
         colors={['#B2CEB1', '#B2CEB1', '#E6EFE6']}
         className=" left-[-150] top-[-380] h-[700] w-[700] rounded-[350px]">

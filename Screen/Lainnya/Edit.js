@@ -5,12 +5,12 @@ import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
 
 const Edit = () => {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
 
-    const handleLainnyaPress = () => {
-      // Navigasi ke halaman Lainnya.js
-      navigation.navigate('Lainnya'); // kembali ke halaman Lainnya 
-    };
+  const handleLainnyaPress = () => {
+    // Navigasi ke halaman Lainnya.js
+    navigation.navigate('Lainnya'); // kembali ke halaman Lainnya 
+  };
 
   return (
     <SafeAreaView className="flex-1 bg-white">
@@ -25,25 +25,30 @@ const Edit = () => {
       </LinearGradient>
 
       <View className=" absolute pt-16 w-80 h-auto items-center top-[300]">
-              <View className="mb-4 pl-13">
-                <Text className="text-[#595959] text-sm font-medium">Nama</Text>
-                <TextInput className="w-64 h-9 pl-1 border-b-2 border-[#595959] text-white text-left" />
+        <View className="mb-4 left-9 pl-13 w-[330]">
+          <Text className="text-[#595959] text-sm font-normal">Nama</Text>
+          <TextInput className="w-82 h-9 pl-1 border-b border-[#595959] text-black text-left" />
 
-                <Text className="pt-8 text-[#595959] text-sm font-medium">Nama Pengguna</Text>
-                <TextInput
-                  secureTextEntry={true}
-                  className="w-64 h-9 pl-1 text-white text-left border-b-2 border-[#595959]" />
-                <Text className="pt-8 text-[#595959] text-sm font-medium">Email</Text>
-                <TextInput
-                  secureTextEntry={true}
-                  className="w-64 h-9 pl-1 text-white text-left border-b-2 border-[#595959]" />
-                  <Text className="pt-8 text-[#595959] text-sm font-medium">Email</Text>
-                <TextInput
-                  secureTextEntry={true}
-                  className="w-64 h-9 pl-1 text-white text-left border-b-2 border-[#595959]" />
-              </View>
-            </View>
-      
+          <Text className="pt-8 text-[#595959] text-sm font-normal">Nama Pengguna</Text>
+          <TextInput
+
+            className="w-82 h-9 pl-1 text-black text-left border-b border-[#595959]" />
+          <Text className="pt-8 text-[#595959] text-sm font-normal">Email</Text>
+          <TextInput
+
+            className="w-82 h-9 pl-1 text-black text-left border-b border-[#595959]" />
+          <Text className="pt-8 text-[#595959] text-sm font-normal">No.Hp</Text>
+          <TextInput
+            secureTextEntry={true}
+            className="w-82 h-9 pl-1 text-black text-left border-b border-[#595959]" />
+        </View>
+
+        <View className=" absolute justify-center pt-1 bg-transparent w-[230] h-[35] self-center border-[0.2px] rounded-lg top-8">
+
+          <Text className=" text-[14px] text-center p-1 font-medium self-center text-[#999999]">Tukarkan</Text>
+        </View>
+      </View>
+
     </SafeAreaView>
   )
 }
