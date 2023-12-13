@@ -9,7 +9,12 @@ const Dompet = () => {
 
     const handleLainnyaPress = () => {
         // Navigasi ke halaman Lainnya.js
-        navigation.navigate('Lainnya'); // kembali ke halaman Lainnya 
+        navigation.navigate('LainnyaScreen'); // kembali ke halaman Lainnya 
+    };
+
+    const handleRiwayatPress = () => {
+        // Navigasi ke halaman Lainnya.js
+        navigation.navigate('Index'); // kembali ke halaman Lainnya 
     };
 
     const [selectedButton, setSelectedButton] = useState(null);
@@ -58,7 +63,7 @@ const Dompet = () => {
                 <View className="">
                     <Text className=" text-[36px] font-medium text-center p-2 self-center text-[#044902]">100.000</Text>
                 </View>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={handleRiwayatPress}>
                     <View className="self-center bg-[#E6EFE6] w-[230] h-[35] rounded-lg">
                         <Text className=" text-[16px] font-medium text-center pt-[6] self-center text-[#044902]">Riwayat Penukaran</Text>
                     </View>

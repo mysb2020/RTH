@@ -107,7 +107,7 @@ const TabNavigator = () => {
       >
         {() => (
           <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name="Lainnya" component={Lainnya} />
+            <Stack.Screen name="LainnyaScreen" component={Lainnya} />
             <Stack.Screen name="Dompet" component={Dompet} />
           </Stack.Navigator>
         )}

@@ -24,7 +24,7 @@ const Lainnya = () => {
         className=" left-[-150] top-[-380] h-[700] w-[700] rounded-[350px]">
       </LinearGradient>
       <Text className=" text-2xl font-bold left-[110] top-[-485]"> Muh. Yusuf S.B. </Text>
-      <Text className=" text-sm left-[75] top-[-480]"> Myusuf@gmail.com | +01 234 567 89 </Text>
+      <Text className=" text-sm left-[130] top-[-480]"> Myusuf@gmail.com </Text>
       <LinearGradient
         colors={['#022C01', '#056103', '#056103']}
         className="top-[-680px] left-[140px] h-[120] w-[120] rounded-[60px] ">
