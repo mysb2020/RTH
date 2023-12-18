@@ -16,6 +16,7 @@ import Edit from './Screen/Lainnya/Edit';
 import Index from './Screen/Lainnya/RiwayatPenukaran/Index';
 import Hasil from './Screen/Kalkulator/Hasil';
 import Loading from './Screen/Kalkulator/Loading';
+import Konfirmasi from './Screen/Kalkulator/Konfirmasi';
 
 const Stack = createNativeStackNavigator();
 
@@ -37,6 +38,7 @@ export default function App() {
         <Stack.Screen name="Index" component={Index} />
         <Stack.Screen name="Hasil" component={Hasil} />
         <Stack.Screen name="Loading" component={Loading} />
+        <Stack.Screen name="Konfirmasi" component={Konfirmasi} />
       </Stack.Navigator>
     </NavigationContainer>
     </GestureHandlerRootView>

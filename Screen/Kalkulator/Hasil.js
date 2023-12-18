@@ -2,8 +2,15 @@ import React from 'react'
 import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, Text, View, Image, TouchableOpacity } from 'react-native'
 import { EllipsisVerticalIcon, PaperAirplaneIcon, CameraIcon } from "react-native-heroicons/outline";
+import { useNavigation } from '@react-navigation/native';
 
 const Hasil = () => {
+    const navigation = useNavigation();
+
+  const handleKonfirmasiPress = () => {
+    // Navigasi ke halaman Konfirmasi.js
+    navigation.navigate('Konfirmasi'); // Sesuaikan dengan nama halaman Hasil perhitungan karbon Anda
+  };
     return (
         <SafeAreaView className=" flex-1">
             <StatusBar backgroundColor="" />
@@ -96,7 +103,8 @@ const Hasil = () => {
                         <View className=" absolute flex-row left-5 items-center top-[250]">
                         <CameraIcon size={29} left={3} color="#022201" className=" absolute" />
                         <PaperAirplaneIcon size={28} left={33} color="#022201" className=" absolute" />
-                            <TouchableOpacity className=" bg-[#E6EFE6] left-14 items-center justify-center w-[230px] h-[35px] rounded-md">
+                            <TouchableOpacity onPress={handleKonfirmasiPress}
+                            className=" bg-[#E6EFE6] left-14 items-center justify-center w-[230px] h-[35px] rounded-md">
                                 <Text className=" text-[#044902] pl-2 text-[20px] font-medium">Konfirmasi</Text>
                             </TouchableOpacity>
                         </View>
