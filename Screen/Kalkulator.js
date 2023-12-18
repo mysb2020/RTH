@@ -1,10 +1,18 @@
 import React, { useState } from 'react'
 import { Text, View,  TouchableOpacity, ScrollView, SafeAreaView } from 'react-native'
-import { ChevronDownIcon, ArrowLeftIcon } from "react-native-heroicons/outline";
+import { ChevronDownIcon, EllipsisVerticalIcon } from "react-native-heroicons/outline";
 // import { Picker } from '@react-native-picker/picker';
 import { TextInput } from 'react-native-gesture-handler';
+import { useNavigation } from '@react-navigation/native';
 
 const Kalkulator = () => {
+  const navigation = useNavigation();
+
+  const handleHasilPress = () => {
+    // Navigasi ke halaman Hasil.js
+    navigation.navigate('Loading'); // Sesuaikan dengan nama halaman Hasil perhitungan karbon Anda
+  };
+
   const [jenisTanaman, setJenisTanaman] = useState('');
   const [showJenisOptions, setShowJenisOptions] = useState(false);
   const [textColor, setTextColor] = useState('gray');
@@ -170,7 +178,7 @@ const Kalkulator = () => {
             </TouchableOpacity>
 
             <TouchableOpacity
-              onPress={handleHitungKarbon}
+              onPress={handleHasilPress} 
               style={{
                 backgroundColor: '#F5F5F5',
                 paddingVertical: 12,

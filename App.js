@@ -14,6 +14,8 @@ import Rain from './Screen/Tanaman/Rain';
 import Dompet from './Screen/Lainnya/Dompet';
 import Edit from './Screen/Lainnya/Edit';
 import Index from './Screen/Lainnya/RiwayatPenukaran/Index';
+import Hasil from './Screen/Kalkulator/Hasil';
+import Loading from './Screen/Kalkulator/Loading';
 
 const Stack = createNativeStackNavigator();
 
@@ -33,6 +35,8 @@ export default function App() {
         <Stack.Screen name="Dompet" component={Dompet} />
         <Stack.Screen name="Edit" component={Edit} />
         <Stack.Screen name="Index" component={Index} />
+        <Stack.Screen name="Hasil" component={Hasil} />
+        <Stack.Screen name="Loading" component={Loading} />
       </Stack.Navigator>
     </NavigationContainer>
     </GestureHandlerRootView>
