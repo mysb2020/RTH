@@ -68,12 +68,14 @@ const styles = StyleSheet.create({
   camera: {
     flex: 1,
     width: '100%',
+    aspectRatio: 2 / 3,
   },
   buttonContainer: {
     flex: 1,
     backgroundColor: 'transparent',
     flexDirection: 'row',
-    margin: 20,
+    right: 50,
+    margin: 50,
     justifyContent: 'flex-end',
   },
   button: {

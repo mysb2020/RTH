@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text, View, TouchableOpacity, ScrollView, SafeAreaView, Image, TextInput } from 'react-native'
+import { Text, View, TouchableOpacity, StyleSheet , SafeAreaView, Image, TextInput } from 'react-native'
 import { ArrowLeftIcon } from "react-native-heroicons/outline";
 import { LinearGradient } from 'expo-linear-gradient';
 import { useNavigation } from '@react-navigation/native';
@@ -49,6 +49,8 @@ const Edit = () => {
           </TouchableOpacity>
         </View>
       </View>
+      
+      
 
     </SafeAreaView>
   )
